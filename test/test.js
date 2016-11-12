@@ -24,7 +24,7 @@ describe('test plugin', function() {
     }
     var cssobj = _cssobj({plugins:[gencss(), lib()]})
     var ret = cssobj(obj)
-    expect(ret.css).equal(`@keyframes abc_dqb81j1_ {
+    expect(ret.css).equal(`@keyframes abc_ani_dqb81j1_ {
   from {
     width: 100;
   }
@@ -34,17 +34,17 @@ describe('test plugin', function() {
 }
 p {
   color: red;
-  animation: 4s linear 0s infinite alternate abc_dqb81j1_;
+  animation: 4s linear 0s infinite alternate abc_ani_dqb81j1_;
   animation-duration: 1s;
 }
 div {
-  animation-name: abc_dqb81j1_;
+  animation-name: abc_ani_dqb81j1_;
   animation-delay: 5s;
 }
 `)
   })
 
-  it('should custom suffix', function() {
+  it('should custom space', function() {
     var obj = {
       '@keyframes abc': {},
       '@keyframes !def': {},
@@ -54,9 +54,9 @@ div {
 
     var option = {}
     lib(option)
-    expect(option.suffix).equal('_dqb81j2_')
+    expect(option.space).equal('_ani_dqb81j2_')
 
-    option = {suffix: 'xyz'}
+    option = {space: 'xyz'}
     var cssobj = _cssobj({plugins:[gencss(), lib(option)]})
     var ret = cssobj(obj)
     expect(ret.css).equal(`@keyframes abcxyz {

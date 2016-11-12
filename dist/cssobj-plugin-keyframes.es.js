@@ -25,9 +25,9 @@ function own(o, k) {
 // random string, should used across all cssobj plugins
 var random = (function () {
   var count = 0;
-  return function () {
+  return function (prefix) {
     count++;
-    return '_' + Math.floor(Math.random() * Math.pow(2, 32)).toString(36) + count + '_'
+    return '_' + (prefix||'') + Math.floor(Math.random() * Math.pow(2, 32)).toString(36) + count + '_'
   }
 })();
 
@@ -54,7 +54,7 @@ function arrayKV (obj, k, v, reverse, unique) {
 
 function fm(option) {
   option = option || {};
-  var suffix = option.suffix = option.suffix || random();
+  var space = option.space = option.space || random('ani_');
   return {
     selector: function(sel, node) {
       var match = /^\s*@keyframes\s+(.*)$/i.exec(node.groupText);
@@ -63,14 +63,14 @@ function fm(option) {
           (
             match[1].charAt(0)=='!'
               ? match[1].slice(1)
-              : match[1]+suffix
+              : match[1]+space
           );
       }
       return sel
     },
     value: function(val, key) {
       return ['animationName', 'animation'].indexOf(key) > -1
-        ? val.charAt(0)=='!' ? val.slice(1) : val + suffix
+        ? val.charAt(0)=='!' ? val.slice(1) : val + space
         : val
     }
   }
