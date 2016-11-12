@@ -1,6 +1,6 @@
 {
   "name": "cssobj-plugin-keyframes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Make keyframes rules localized, and apply to animation and animation-name css props.",
   "main": "./dist/cssobj-plugin-keyframes.cjs.js",
   "jsnext:main": "./dist/cssobj-plugin-keyframes.es.js",
@@ -30,5 +30,7 @@
     "url": "https://github.com/cssobj/cssobj-plugin-keyframes/issues"
   },
   "homepage": "https://github.com/cssobj/cssobj-plugin-keyframes#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  }
 }

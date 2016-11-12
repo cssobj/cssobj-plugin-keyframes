@@ -24,10 +24,10 @@ cssobj(obj, { plugins: [lib()] })
 result css:
 
 ``` css
-@keyframes abc_i3bhs8s1_ {}
+@keyframes abc_ani_i3bhs8s1_ {}
 @keyframes def {}
 p {
-  animation: 1s abc_i3bhs8s1_;
+  animation: 1s abc_ani_i3bhs8s1_;
 }
 div {
   animation-name: def;
@@ -36,8 +36,6 @@ div {
 
 ## Caveat
 
-- The name of `@keyframes` and `animation-name` should not ending with space.
-
-- `animation-name` prop should at **last** position in [animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation) shorthand.
+- `animation-name` prop should at **last** position in [animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation) shorthand, that simplified the parser, and more unified.
 
 

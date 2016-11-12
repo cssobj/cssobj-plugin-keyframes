@@ -11,10 +11,10 @@ var lib = require('../')
 describe('test plugin', function() {
   it('@keyframes and animation names', function() {
     var obj={
-      '@keyframes abc': { from:{width: 100}, to:{width:200}  },
+      '@keyframes abc ': { from:{width: 100}, to:{width:200}  },
       p: {
         color: 'red',
-        animation: '4s linear 0s infinite alternate abc',
+        animation: '4s linear 0s infinite alternate abc ',
         animationDuration: '1s'
       },
       div: {
