@@ -1,6 +1,8 @@
 # cssobj-plugin-keyframes
 Make keyframes rules localized, and apply to animation and animation-name css props.
 
+[![CircleCI](https://circleci.com/gh/cssobj/cssobj-plugin-keyframes.svg?style=svg)](https://circleci.com/gh/cssobj/cssobj-plugin-keyframes)
+
 ## Install
 
 ``` bash
