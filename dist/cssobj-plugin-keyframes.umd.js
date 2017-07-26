@@ -1,4 +1,8 @@
-'use strict';
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global.cssobj_plugin_keyframes = factory());
+}(this, (function () { 'use strict';
 
 // helper functions for cssobj
 
@@ -75,4 +79,6 @@ function fm (option) {
   }
 }
 
-module.exports = fm;
+return fm;
+
+})));

@@ -15,5 +15,6 @@ export default {
     { format: 'cjs',  dest: 'dist/cssobj-plugin-keyframes.cjs.js'  },
     { format: 'amd',  dest: 'dist/cssobj-plugin-keyframes.amd.js'  },
     { format: 'iife', dest: 'dist/cssobj-plugin-keyframes.iife.js' },
+    { format: 'umd', dest: 'dist/cssobj-plugin-keyframes.umd.js' },
   ]
 }

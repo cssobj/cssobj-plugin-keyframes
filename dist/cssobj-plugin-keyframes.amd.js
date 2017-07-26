@@ -5,9 +5,7 @@ define(function () { 'use strict';
 // check n is numeric, or string of numeric
 
 
-function own(o, k) {
-  return {}.hasOwnProperty.call(o, k)
-}
+
 
 // set default option (not deeply)
 
@@ -19,9 +17,6 @@ function own(o, k) {
 
 
 // repeat str for num times
-
-
-// don't use String.prototype.trim in cssobj, using below instead
 
 
 // random string, should used across all cssobj plugins
@@ -37,11 +32,7 @@ var random = (function () {
 
 
 // ensure obj[k] as array, then push v into it
-function arrayKV (obj, k, v, reverse, unique) {
-  obj[k] = k in obj ? [].concat(obj[k]) : [];
-  if(unique && obj[k].indexOf(v)>-1) { return }
-  reverse ? obj[k].unshift(v) : obj[k].push(v);
-}
+
 
 // replace find in str, with rep function result
 
@@ -49,7 +40,13 @@ function arrayKV (obj, k, v, reverse, unique) {
 // get parents array from node (when it's passed the test)
 
 
-// split selector etc. aware of css attributes
+// split selector with comma, aware of css attributes
+
+
+// split selector with splitter, aware of css attributes
+
+
+// split char aware of syntax
 
 
 // checking for valid css value
